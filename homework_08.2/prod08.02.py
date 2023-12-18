@@ -4,7 +4,6 @@ from mongoengine import connect
 
 from mod02 import Contact
 
-# З'єднання з MongoDB
 connect(
     db='homework2', host="mongodb+srv://Impelle:Mh200601@cluster0.z0mvkzp.mongodb.net/?retryWrites=true&w=majority"
 )
