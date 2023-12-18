@@ -1,7 +1,6 @@
 from cachetools import cached, TTLCache
-from redis import StrictRedis
-
 from models import Quote, Author
+from redis import StrictRedis
 
 redis_host = 'localhost'
 redis_port = 6379
@@ -38,7 +37,7 @@ def find_by_tags(tag: str):
     tags = tag.split(",")
     print(f'Find by {tags}')
     result = []
-    unique_quotes = set()  #множина для унікальних цитат
+    unique_quotes = set()  # множина для унікальних цитат
     for tag in tags:
         quotes = Quote.objects(tags__iregex=tag)
         unique_quotes.update(quote.quote for quote in quotes)

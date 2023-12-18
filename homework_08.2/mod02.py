@@ -1,8 +1,9 @@
-from mongoengine import connect, Document, StringField, BooleanField, EmailField
+from mongoengine import connect, Document, StringField, BooleanField
 
 connect(
-    db = 'homework2', host="mongodb+srv://Impelle:Mh200601@cluster0.z0mvkzp.mongodb.net/?retryWrites=true&w=majority"
+    db='homework2', host="mongodb+srv://Impelle:Mh200601@cluster0.z0mvkzp.mongodb.net/?retryWrites=true&w=majority"
 )
+
 
 class Contact(Document):
     full_name = StringField(required=True)

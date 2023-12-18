@@ -1,7 +1,8 @@
 import json
+
 from mongoengine.errors import NotUniqueError
 
-from models import Author, Quote
+from models01 import Author, Quote
 
 if __name__ == '__main__':
     with open('authors.json', encoding='utf-8') as fd:
